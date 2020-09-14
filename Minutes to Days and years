@@ -1,0 +1,24 @@
+package mycaptain;
+
+
+public class YearsAndMinutes {
+
+	public static void main(String[] args) {
+		DaysAndYears D=new DaysAndYears();
+		int cal=D.calculation(3456789);
+		System.out.println(cal);
+		}
+
+}
+class DaysAndYears{
+	int calculation(long min)
+	{
+		System.out.println("Minutes: "+min);
+		long  days=min/1440;
+		long  years=days/356;
+		int remainingdays=(int) (days % 365);
+		System.out.print(min+" minutes is approximately "+(int) years+" years and days are ");
+		return remainingdays;
+	}
+
+}
